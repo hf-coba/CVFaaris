@@ -2,6 +2,20 @@
 .btsIsi { margin-left:50px; margin-right:50px; }
 .findbtn { background-color: #5E35B1 !important; }
 
+
+/* Fake Cursor */
+@keyframes blink {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.cursor::after {
+  content: "|";
+  font-size: 1em;
+  font-weight: bold;
+  animation: blink infinite 0.7s;
+}
+
+/* Manipulate UL LI */
 ul.ul_cstm {
 	list-style-position: outside; 
 	/* outside = set ikon bullet / number list menjorok keluar, rata baris kalimat pertama dengan baris kalimat berikutnya SAMA */
